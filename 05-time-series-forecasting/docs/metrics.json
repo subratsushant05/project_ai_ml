@@ -1,0 +1,113 @@
+{
+  "retail_sales": {
+    "series": "retail_sales",
+    "winner": "exp_smoothing",
+    "backtest_mean_metrics": {
+      "exp_smoothing": {
+        "mae": 7.6274,
+        "rmse": 10.1739,
+        "smape": 3.3056,
+        "mase": 0.7642
+      },
+      "lightgbm": {
+        "mae": 8.3907,
+        "rmse": 10.5949,
+        "smape": 3.6325,
+        "mase": 0.8404
+      },
+      "sarima": {
+        "mae": 9.9486,
+        "rmse": 12.5845,
+        "smape": 4.2576,
+        "mase": 0.9965
+      },
+      "seasonal_naive": {
+        "mae": 11.1893,
+        "rmse": 14.2456,
+        "smape": 4.823,
+        "mase": 1.1208
+      }
+    },
+    "conformal": {
+      "alpha": 0.1,
+      "half_width": 19.6051,
+      "n_calibration": 112,
+      "held_out_coverage": 0.9643
+    },
+    "n_anomalies_flagged": 8
+  },
+  "web_traffic": {
+    "series": "web_traffic",
+    "winner": "exp_smoothing",
+    "backtest_mean_metrics": {
+      "exp_smoothing": {
+        "mae": 132.8634,
+        "rmse": 176.7082,
+        "smape": 2.1639,
+        "mase": 0.7873
+      },
+      "lightgbm": {
+        "mae": 145.6355,
+        "rmse": 193.8175,
+        "smape": 2.37,
+        "mase": 0.8626
+      },
+      "sarima": {
+        "mae": 156.041,
+        "rmse": 205.2534,
+        "smape": 2.5237,
+        "mase": 0.924
+      },
+      "seasonal_naive": {
+        "mae": 189.0108,
+        "rmse": 232.0646,
+        "smape": 3.0619,
+        "mase": 1.1196
+      }
+    },
+    "conformal": {
+      "alpha": 0.1,
+      "half_width": 282.2533,
+      "n_calibration": 112,
+      "held_out_coverage": 0.9286
+    },
+    "n_anomalies_flagged": 15
+  },
+  "energy_demand": {
+    "series": "energy_demand",
+    "winner": "exp_smoothing",
+    "backtest_mean_metrics": {
+      "exp_smoothing": {
+        "mae": 20.3764,
+        "rmse": 26.7261,
+        "smape": 2.5075,
+        "mase": 0.7797
+      },
+      "lightgbm": {
+        "mae": 26.7216,
+        "rmse": 33.883,
+        "smape": 3.3043,
+        "mase": 1.0223
+      },
+      "sarima": {
+        "mae": 31.2259,
+        "rmse": 38.6047,
+        "smape": 3.8515,
+        "mase": 1.1942
+      },
+      "seasonal_naive": {
+        "mae": 36.9933,
+        "rmse": 45.4609,
+        "smape": 4.4274,
+        "mase": 1.417
+      }
+    },
+    "conformal": {
+      "alpha": 0.1,
+      "half_width": 47.1979,
+      "n_calibration": 112,
+      "held_out_coverage": 0.9643
+    },
+    "n_anomalies_flagged": 8
+  }
+}
