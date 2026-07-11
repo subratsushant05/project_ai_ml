@@ -1,0 +1,16 @@
+# Core ML
+scikit-learn>=1.4,<2
+pandas>=2.0
+numpy>=1.26
+
+# Experiment tracking + model registry (SQLite backend, registry aliases)
+mlflow>=2.15,<3
+
+# Serving + monitoring
+fastapi>=0.110
+uvicorn>=0.29
+prometheus-client>=0.20
+
+# Configuration + validation
+pydantic>=2.7,<3
+pydantic-settings>=2.2

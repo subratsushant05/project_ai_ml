@@ -1,0 +1,16 @@
+# ML artifacts and local stores
+mlruns/
+mlruns.db
+mlartifacts/
+artifacts/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.venv/
+
+# Environment
+.env

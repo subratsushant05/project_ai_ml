@@ -1,0 +1,72 @@
+# Example CI/CD workflow for this project.
+#
+# This file documents how model tests would gate promotion in CI. It lives
+# here as a reference artifact; to activate it, copy it to
+# .github/workflows/mlops.yml at the repository root and adjust paths.
+
+name: mlops-pipeline
+
+on:
+  push:
+    paths: ["06-mlops-pipeline/**"]
+  pull_request:
+    paths: ["06-mlops-pipeline/**"]
+
+defaults:
+  run:
+    working-directory: 06-mlops-pipeline
+
+jobs:
+  quality-gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install pytest ruff
+      - name: Lint
+        run: ruff check .
+      - name: Unit + integration tests
+        # Promotion logic, drift math, schema gate, and API are all tested
+        # here; a red suite blocks the candidate-training job below.
+        run: pytest tests/ -v
+
+  train-candidate:
+    # The model gate: train a candidate and let the promotion policy decide.
+    # The pipeline only moves the "production" alias when the candidate
+    # beats the incumbent by the configured AUC margin AND passes the
+    # absolute guardrails, so merging never silently ships a worse model.
+    needs: quality-gates
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Restore registry state
+        # In a real deployment the tracking store is a shared service
+        # (e.g. a Postgres-backed MLflow server) instead of a cached SQLite
+        # file; this cache step stands in for that shared state.
+        uses: actions/cache@v4
+        with:
+          path: |
+            06-mlops-pipeline/mlruns.db
+            06-mlops-pipeline/mlruns
+            06-mlops-pipeline/artifacts
+          key: mlflow-registry-${{ github.ref_name }}
+      - name: Run pipeline (validate -> train -> evaluate -> gate)
+        run: python -m mlops_pipeline.run_pipeline
+      - name: Upload audit log
+        uses: actions/upload-artifact@v4
+        with:
+          name: registry-audit
+          path: 06-mlops-pipeline/artifacts/registry_audit.jsonl

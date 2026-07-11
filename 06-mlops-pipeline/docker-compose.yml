@@ -1,0 +1,28 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - mlops-store:/app
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+
+  # Optional: MLflow UI over the same tracking store as the API.
+  # Start with: docker compose --profile mlflow up
+  mlflow-ui:
+    build: .
+    profiles: ["mlflow"]
+    command: mlflow ui --backend-store-uri sqlite:///mlruns.db --host 0.0.0.0 --port 5000
+    ports:
+      - "5000:5000"
+    volumes:
+      - mlops-store:/app
+    depends_on:
+      - api
+
+volumes:
+  mlops-store:
