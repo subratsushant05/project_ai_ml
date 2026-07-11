@@ -1,0 +1,10 @@
+{"id": "c01", "input": "What is 12 * 7?", "expected_tools": ["calculator"], "expected_answer": "12 * 7 = 84."}
+{"id": "c02", "input": "What is (5 + 3) * 2?", "expected_tools": ["calculator"], "expected_answer": "(5 + 3) * 2 = 16."}
+{"id": "c03", "input": "What is the weather in Paris?", "expected_tools": ["weather"], "expected_answer": "It is 18 C and partly cloudy in Paris."}
+{"id": "c04", "input": "What is the weather in Tokyo?", "expected_tools": ["weather"], "expected_answer": "It is 24 C and sunny in Tokyo."}
+{"id": "c05", "input": "What is the weather in London?", "expected_tools": ["weather"], "expected_answer": "It is 14 C and overcast in London."}
+{"id": "c06", "input": "Who founded Acme Corporation?", "expected_tools": ["web_search"], "expected_answer": "Acme Corporation was founded by Jane Smith in 1998."}
+{"id": "c07", "input": "What does the Voyager 1 probe study?", "expected_tools": ["web_search"], "expected_answer": "The Voyager 1 probe studies the outer heliosphere and interstellar space."}
+{"id": "c08", "input": "What language is the Zephyr framework written in?", "expected_tools": ["web_search"], "expected_answer": "The Zephyr framework is written in Rust."}
+{"id": "c09", "input": "If the temperature in Berlin doubled, what would it be?", "expected_tools": ["weather", "calculator"], "expected_answer": "If the temperature in Berlin doubled it would be 22 C.", "reference_trajectory": ["weather", "calculator"]}
+{"id": "c10", "input": "What is the sum of the temperatures in Tokyo and Berlin?", "expected_tools": ["weather", "calculator"], "expected_answer": "The sum of the temperatures in Tokyo and Berlin is 35 C.", "reference_trajectory": ["weather", "weather", "calculator"]}

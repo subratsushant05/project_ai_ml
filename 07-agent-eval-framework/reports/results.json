@@ -1,0 +1,1432 @@
+{
+  "GoodAgent": {
+    "agent_name": "GoodAgent",
+    "dataset_name": "basic",
+    "case_results": [
+      {
+        "case_id": "c01",
+        "input": "What is 12 * 7?",
+        "final_answer": "12 * 7 = 84.",
+        "tool_sequence": [
+          "calculator"
+        ],
+        "metrics": {
+          "tool_selection": {
+            "metric": "tool_selection",
+            "score": 1.0,
+            "details": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "missing": [],
+              "unexpected": []
+            }
+          },
+          "tool_order": {
+            "metric": "tool_order",
+            "score": 1.0,
+            "details": {
+              "edit_distance": 0,
+              "expected_sequence": [
+                "calculator"
+              ],
+              "actual_sequence": [
+                "calculator"
+              ]
+            }
+          },
+          "efficiency": {
+            "metric": "efficiency",
+            "score": 1.0,
+            "details": {
+              "reference_steps": 1,
+              "actual_steps": 1,
+              "redundant_calls": 0
+            }
+          },
+          "answer_correctness": {
+            "metric": "answer_correctness",
+            "score": 1.0,
+            "details": {
+              "exact": true,
+              "fuzzy": 1.0
+            }
+          },
+          "cost_latency": {
+            "metric": "cost_latency",
+            "score": 0.9406,
+            "details": {
+              "cost_usd": 0.00012,
+              "total_tokens": 500,
+              "wall_time_s": 0.5,
+              "cost_budget_usd": 0.005,
+              "latency_budget_s": 5.0
+            }
+          }
+        },
+        "total_tokens": 500,
+        "cost_usd": 0.00012,
+        "wall_time_s": 0.5
+      },
+      {
+        "case_id": "c02",
+        "input": "What is (5 + 3) * 2?",
+        "final_answer": "(5 + 3) * 2 = 16.",
+        "tool_sequence": [
+          "calculator"
+        ],
+        "metrics": {
+          "tool_selection": {
+            "metric": "tool_selection",
+            "score": 1.0,
+            "details": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "missing": [],
+              "unexpected": []
+            }
+          },
+          "tool_order": {
+            "metric": "tool_order",
+            "score": 1.0,
+            "details": {
+              "edit_distance": 0,
+              "expected_sequence": [
+                "calculator"
+              ],
+              "actual_sequence": [
+                "calculator"
+              ]
+            }
+          },
+          "efficiency": {
+            "metric": "efficiency",
+            "score": 1.0,
+            "details": {
+              "reference_steps": 1,
+              "actual_steps": 1,
+              "redundant_calls": 0
+            }
+          },
+          "answer_correctness": {
+            "metric": "answer_correctness",
+            "score": 1.0,
+            "details": {
+              "exact": true,
+              "fuzzy": 1.0
+            }
+          },
+          "cost_latency": {
+            "metric": "cost_latency",
+            "score": 0.9406,
+            "details": {
+              "cost_usd": 0.00012,
+              "total_tokens": 500,
+              "wall_time_s": 0.5,
+              "cost_budget_usd": 0.005,
+              "latency_budget_s": 5.0
+            }
+          }
+        },
+        "total_tokens": 500,
+        "cost_usd": 0.00012,
+        "wall_time_s": 0.5
+      },
+      {
+        "case_id": "c03",
+        "input": "What is the weather in Paris?",
+        "final_answer": "It is 18 C and partly cloudy in Paris.",
+        "tool_sequence": [
+          "weather"
+        ],
+        "metrics": {
+          "tool_selection": {
+            "metric": "tool_selection",
+            "score": 1.0,
+            "details": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "missing": [],
+              "unexpected": []
+            }
+          },
+          "tool_order": {
+            "metric": "tool_order",
+            "score": 1.0,
+            "details": {
+              "edit_distance": 0,
+              "expected_sequence": [
+                "weather"
+              ],
+              "actual_sequence": [
+                "weather"
+              ]
+            }
+          },
+          "efficiency": {
+            "metric": "efficiency",
+            "score": 1.0,
+            "details": {
+              "reference_steps": 1,
+              "actual_steps": 1,
+              "redundant_calls": 0
+            }
+          },
+          "answer_correctness": {
+            "metric": "answer_correctness",
+            "score": 1.0,
+            "details": {
+              "exact": true,
+              "fuzzy": 1.0
+            }
+          },
+          "cost_latency": {
+            "metric": "cost_latency",
+            "score": 0.9406,
+            "details": {
+              "cost_usd": 0.00012,
+              "total_tokens": 500,
+              "wall_time_s": 0.5,
+              "cost_budget_usd": 0.005,
+              "latency_budget_s": 5.0
+            }
+          }
+        },
+        "total_tokens": 500,
+        "cost_usd": 0.00012,
+        "wall_time_s": 0.5
+      },
+      {
+        "case_id": "c04",
+        "input": "What is the weather in Tokyo?",
+        "final_answer": "It is 24 C and sunny in Tokyo.",
+        "tool_sequence": [
+          "weather"
+        ],
+        "metrics": {
+          "tool_selection": {
+            "metric": "tool_selection",
+            "score": 1.0,
+            "details": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "missing": [],
+              "unexpected": []
+            }
+          },
+          "tool_order": {
+            "metric": "tool_order",
+            "score": 1.0,
+            "details": {
+              "edit_distance": 0,
+              "expected_sequence": [
+                "weather"
+              ],
+              "actual_sequence": [
+                "weather"
+              ]
+            }
+          },
+          "efficiency": {
+            "metric": "efficiency",
+            "score": 1.0,
+            "details": {
+              "reference_steps": 1,
+              "actual_steps": 1,
+              "redundant_calls": 0
+            }
+          },
+          "answer_correctness": {
+            "metric": "answer_correctness",
+            "score": 1.0,
+            "details": {
+              "exact": true,
+              "fuzzy": 1.0
+            }
+          },
+          "cost_latency": {
+            "metric": "cost_latency",
+            "score": 0.9406,
+            "details": {
+              "cost_usd": 0.00012,
+              "total_tokens": 500,
+              "wall_time_s": 0.5,
+              "cost_budget_usd": 0.005,
+              "latency_budget_s": 5.0
+            }
+          }
+        },
+        "total_tokens": 500,
+        "cost_usd": 0.00012,
+        "wall_time_s": 0.5
+      },
+      {
+        "case_id": "c05",
+        "input": "What is the weather in London?",
+        "final_answer": "It is 14 C and overcast in London.",
+        "tool_sequence": [
+          "weather"
+        ],
+        "metrics": {
+          "tool_selection": {
+            "metric": "tool_selection",
+            "score": 1.0,
+            "details": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "missing": [],
+              "unexpected": []
+            }
+          },
+          "tool_order": {
+            "metric": "tool_order",
+            "score": 1.0,
+            "details": {
+              "edit_distance": 0,
+              "expected_sequence": [
+                "weather"
+              ],
+              "actual_sequence": [
+                "weather"
+              ]
+            }
+          },
+          "efficiency": {
+            "metric": "efficiency",
+            "score": 1.0,
+            "details": {
+              "reference_steps": 1,
+              "actual_steps": 1,
+              "redundant_calls": 0
+            }
+          },
+          "answer_correctness": {
+            "metric": "answer_correctness",
+            "score": 1.0,
+            "details": {
+              "exact": true,
+              "fuzzy": 1.0
+            }
+          },
+          "cost_latency": {
+            "metric": "cost_latency",
+            "score": 0.9406,
+            "details": {
+              "cost_usd": 0.00012,
+              "total_tokens": 500,
+              "wall_time_s": 0.5,
+              "cost_budget_usd": 0.005,
+              "latency_budget_s": 5.0
+            }
+          }
+        },
+        "total_tokens": 500,
+        "cost_usd": 0.00012,
+        "wall_time_s": 0.5
+      },
+      {
+        "case_id": "c06",
+        "input": "Who founded Acme Corporation?",
+        "final_answer": "Acme Corporation was founded by Jane Smith in 1998.",
+        "tool_sequence": [
+          "web_search"
+        ],
+        "metrics": {
+          "tool_selection": {
+            "metric": "tool_selection",
+            "score": 1.0,
+            "details": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "missing": [],
+              "unexpected": []
+            }
+          },
+          "tool_order": {
+            "metric": "tool_order",
+            "score": 1.0,
+            "details": {
+              "edit_distance": 0,
+              "expected_sequence": [
+                "web_search"
+              ],
+              "actual_sequence": [
+                "web_search"
+              ]
+            }
+          },
+          "efficiency": {
+            "metric": "efficiency",
+            "score": 1.0,
+            "details": {
+              "reference_steps": 1,
+              "actual_steps": 1,
+              "redundant_calls": 0
+            }
+          },
+          "answer_correctness": {
+            "metric": "answer_correctness",
+            "score": 1.0,
+            "details": {
+              "exact": true,
+              "fuzzy": 1.0
+            }
+          },
+          "cost_latency": {
+            "metric": "cost_latency",
+            "score": 0.9406,
+            "details": {
+              "cost_usd": 0.00012,
+              "total_tokens": 500,
+              "wall_time_s": 0.5,
+              "cost_budget_usd": 0.005,
+              "latency_budget_s": 5.0
+            }
+          }
+        },
+        "total_tokens": 500,
+        "cost_usd": 0.00012,
+        "wall_time_s": 0.5
+      },
+      {
+        "case_id": "c07",
+        "input": "What does the Voyager 1 probe study?",
+        "final_answer": "The Voyager 1 probe studies the outer heliosphere and interstellar space.",
+        "tool_sequence": [
+          "web_search"
+        ],
+        "metrics": {
+          "tool_selection": {
+            "metric": "tool_selection",
+            "score": 1.0,
+            "details": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "missing": [],
+              "unexpected": []
+            }
+          },
+          "tool_order": {
+            "metric": "tool_order",
+            "score": 1.0,
+            "details": {
+              "edit_distance": 0,
+              "expected_sequence": [
+                "web_search"
+              ],
+              "actual_sequence": [
+                "web_search"
+              ]
+            }
+          },
+          "efficiency": {
+            "metric": "efficiency",
+            "score": 1.0,
+            "details": {
+              "reference_steps": 1,
+              "actual_steps": 1,
+              "redundant_calls": 0
+            }
+          },
+          "answer_correctness": {
+            "metric": "answer_correctness",
+            "score": 1.0,
+            "details": {
+              "exact": true,
+              "fuzzy": 1.0
+            }
+          },
+          "cost_latency": {
+            "metric": "cost_latency",
+            "score": 0.9406,
+            "details": {
+              "cost_usd": 0.00012,
+              "total_tokens": 500,
+              "wall_time_s": 0.5,
+              "cost_budget_usd": 0.005,
+              "latency_budget_s": 5.0
+            }
+          }
+        },
+        "total_tokens": 500,
+        "cost_usd": 0.00012,
+        "wall_time_s": 0.5
+      },
+      {
+        "case_id": "c08",
+        "input": "What language is the Zephyr framework written in?",
+        "final_answer": "The Zephyr framework is written in Rust.",
+        "tool_sequence": [
+          "web_search"
+        ],
+        "metrics": {
+          "tool_selection": {
+            "metric": "tool_selection",
+            "score": 1.0,
+            "details": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "missing": [],
+              "unexpected": []
+            }
+          },
+          "tool_order": {
+            "metric": "tool_order",
+            "score": 1.0,
+            "details": {
+              "edit_distance": 0,
+              "expected_sequence": [
+                "web_search"
+              ],
+              "actual_sequence": [
+                "web_search"
+              ]
+            }
+          },
+          "efficiency": {
+            "metric": "efficiency",
+            "score": 1.0,
+            "details": {
+              "reference_steps": 1,
+              "actual_steps": 1,
+              "redundant_calls": 0
+            }
+          },
+          "answer_correctness": {
+            "metric": "answer_correctness",
+            "score": 1.0,
+            "details": {
+              "exact": true,
+              "fuzzy": 1.0
+            }
+          },
+          "cost_latency": {
+            "metric": "cost_latency",
+            "score": 0.9406,
+            "details": {
+              "cost_usd": 0.00012,
+              "total_tokens": 500,
+              "wall_time_s": 0.5,
+              "cost_budget_usd": 0.005,
+              "latency_budget_s": 5.0
+            }
+          }
+        },
+        "total_tokens": 500,
+        "cost_usd": 0.00012,
+        "wall_time_s": 0.5
+      },
+      {
+        "case_id": "c09",
+        "input": "If the temperature in Berlin doubled, what would it be?",
+        "final_answer": "If the temperature in Berlin doubled it would be 22 C.",
+        "tool_sequence": [
+          "weather",
+          "calculator"
+        ],
+        "metrics": {
+          "tool_selection": {
+            "metric": "tool_selection",
+            "score": 1.0,
+            "details": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "missing": [],
+              "unexpected": []
+            }
+          },
+          "tool_order": {
+            "metric": "tool_order",
+            "score": 1.0,
+            "details": {
+              "edit_distance": 0,
+              "expected_sequence": [
+                "weather",
+                "calculator"
+              ],
+              "actual_sequence": [
+                "weather",
+                "calculator"
+              ]
+            }
+          },
+          "efficiency": {
+            "metric": "efficiency",
+            "score": 1.0,
+            "details": {
+              "reference_steps": 2,
+              "actual_steps": 2,
+              "redundant_calls": 0
+            }
+          },
+          "answer_correctness": {
+            "metric": "answer_correctness",
+            "score": 1.0,
+            "details": {
+              "exact": true,
+              "fuzzy": 1.0
+            }
+          },
+          "cost_latency": {
+            "metric": "cost_latency",
+            "score": 0.9281,
+            "details": {
+              "cost_usd": 0.00012,
+              "total_tokens": 500,
+              "wall_time_s": 0.64,
+              "cost_budget_usd": 0.005,
+              "latency_budget_s": 5.0
+            }
+          }
+        },
+        "total_tokens": 500,
+        "cost_usd": 0.00012,
+        "wall_time_s": 0.64
+      },
+      {
+        "case_id": "c10",
+        "input": "What is the sum of the temperatures in Tokyo and Berlin?",
+        "final_answer": "The sum of the temperatures in Tokyo and Berlin is 35 C.",
+        "tool_sequence": [
+          "weather",
+          "weather",
+          "calculator"
+        ],
+        "metrics": {
+          "tool_selection": {
+            "metric": "tool_selection",
+            "score": 1.0,
+            "details": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "missing": [],
+              "unexpected": []
+            }
+          },
+          "tool_order": {
+            "metric": "tool_order",
+            "score": 1.0,
+            "details": {
+              "edit_distance": 0,
+              "expected_sequence": [
+                "weather",
+                "weather",
+                "calculator"
+              ],
+              "actual_sequence": [
+                "weather",
+                "weather",
+                "calculator"
+              ]
+            }
+          },
+          "efficiency": {
+            "metric": "efficiency",
+            "score": 1.0,
+            "details": {
+              "reference_steps": 3,
+              "actual_steps": 3,
+              "redundant_calls": 0
+            }
+          },
+          "answer_correctness": {
+            "metric": "answer_correctness",
+            "score": 1.0,
+            "details": {
+              "exact": true,
+              "fuzzy": 1.0
+            }
+          },
+          "cost_latency": {
+            "metric": "cost_latency",
+            "score": 0.9159,
+            "details": {
+              "cost_usd": 0.00012,
+              "total_tokens": 500,
+              "wall_time_s": 0.78,
+              "cost_budget_usd": 0.005,
+              "latency_budget_s": 5.0
+            }
+          }
+        },
+        "total_tokens": 500,
+        "cost_usd": 0.00012,
+        "wall_time_s": 0.78
+      }
+    ],
+    "mean_scores": {
+      "tool_selection": 1.0,
+      "tool_order": 1.0,
+      "efficiency": 1.0,
+      "answer_correctness": 1.0,
+      "cost_latency": 0.9369
+    },
+    "total_cost_usd": 0.0012,
+    "total_tokens": 5000,
+    "latency_p50_s": 0.5,
+    "latency_p95_s": 0.717
+  },
+  "SloppyAgent": {
+    "agent_name": "SloppyAgent",
+    "dataset_name": "basic",
+    "case_results": [
+      {
+        "case_id": "c01",
+        "input": "What is 12 * 7?",
+        "final_answer": "Hard to say for sure, but possibly 12 * 7, I did not verify.",
+        "tool_sequence": [
+          "web_search",
+          "calculator",
+          "calculator"
+        ],
+        "metrics": {
+          "tool_selection": {
+            "metric": "tool_selection",
+            "score": 0.6667,
+            "details": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6667,
+              "missing": [],
+              "unexpected": [
+                "web_search"
+              ]
+            }
+          },
+          "tool_order": {
+            "metric": "tool_order",
+            "score": 0.3333,
+            "details": {
+              "edit_distance": 2,
+              "expected_sequence": [
+                "calculator"
+              ],
+              "actual_sequence": [
+                "web_search",
+                "calculator",
+                "calculator"
+              ]
+            }
+          },
+          "efficiency": {
+            "metric": "efficiency",
+            "score": 0.3333,
+            "details": {
+              "reference_steps": 1,
+              "actual_steps": 3,
+              "redundant_calls": 1
+            }
+          },
+          "answer_correctness": {
+            "metric": "answer_correctness",
+            "score": 0.4583,
+            "details": {
+              "exact": false,
+              "fuzzy": 0.25,
+              "judge": "offline",
+              "judge_score": 0.6667,
+              "judge_rationale": "Covered 2/3 reference keywords. Missing: 84."
+            }
+          },
+          "cost_latency": {
+            "metric": "cost_latency",
+            "score": 0.3903,
+            "details": {
+              "cost_usd": 0.00825,
+              "total_tokens": 2010,
+              "wall_time_s": 2.65,
+              "cost_budget_usd": 0.005,
+              "latency_budget_s": 5.0
+            }
+          }
+        },
+        "total_tokens": 2010,
+        "cost_usd": 0.00825,
+        "wall_time_s": 2.65
+      },
+      {
+        "case_id": "c02",
+        "input": "What is (5 + 3) * 2?",
+        "final_answer": "Hard to say for sure, but possibly (5 + 3) *, I did not verify.",
+        "tool_sequence": [
+          "web_search",
+          "calculator",
+          "calculator"
+        ],
+        "metrics": {
+          "tool_selection": {
+            "metric": "tool_selection",
+            "score": 0.6667,
+            "details": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6667,
+              "missing": [],
+              "unexpected": [
+                "web_search"
+              ]
+            }
+          },
+          "tool_order": {
+            "metric": "tool_order",
+            "score": 0.3333,
+            "details": {
+              "edit_distance": 2,
+              "expected_sequence": [
+                "calculator"
+              ],
+              "actual_sequence": [
+                "web_search",
+                "calculator",
+                "calculator"
+              ]
+            }
+          },
+          "efficiency": {
+            "metric": "efficiency",
+            "score": 0.3333,
+            "details": {
+              "reference_steps": 1,
+              "actual_steps": 3,
+              "redundant_calls": 1
+            }
+          },
+          "answer_correctness": {
+            "metric": "answer_correctness",
+            "score": 0.4125,
+            "details": {
+              "exact": false,
+              "fuzzy": 0.325,
+              "judge": "offline",
+              "judge_score": 0.5,
+              "judge_rationale": "Covered 2/4 reference keywords. Missing: 2, 16."
+            }
+          },
+          "cost_latency": {
+            "metric": "cost_latency",
+            "score": 0.3903,
+            "details": {
+              "cost_usd": 0.00825,
+              "total_tokens": 2010,
+              "wall_time_s": 2.65,
+              "cost_budget_usd": 0.005,
+              "latency_budget_s": 5.0
+            }
+          }
+        },
+        "total_tokens": 2010,
+        "cost_usd": 0.00825,
+        "wall_time_s": 2.65
+      },
+      {
+        "case_id": "c03",
+        "input": "What is the weather in Paris?",
+        "final_answer": "Hard to say for sure, but possibly It is 18 C and partly, I did not verify.",
+        "tool_sequence": [
+          "web_search",
+          "weather",
+          "weather"
+        ],
+        "metrics": {
+          "tool_selection": {
+            "metric": "tool_selection",
+            "score": 0.6667,
+            "details": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6667,
+              "missing": [],
+              "unexpected": [
+                "web_search"
+              ]
+            }
+          },
+          "tool_order": {
+            "metric": "tool_order",
+            "score": 0.3333,
+            "details": {
+              "edit_distance": 2,
+              "expected_sequence": [
+                "weather"
+              ],
+              "actual_sequence": [
+                "web_search",
+                "weather",
+                "weather"
+              ]
+            }
+          },
+          "efficiency": {
+            "metric": "efficiency",
+            "score": 0.3333,
+            "details": {
+              "reference_steps": 1,
+              "actual_steps": 3,
+              "redundant_calls": 1
+            }
+          },
+          "answer_correctness": {
+            "metric": "answer_correctness",
+            "score": 0.4978,
+            "details": {
+              "exact": false,
+              "fuzzy": 0.4956,
+              "judge": "offline",
+              "judge_score": 0.5,
+              "judge_rationale": "Covered 2/4 reference keywords. Missing: cloudy, paris."
+            }
+          },
+          "cost_latency": {
+            "metric": "cost_latency",
+            "score": 0.3903,
+            "details": {
+              "cost_usd": 0.00825,
+              "total_tokens": 2010,
+              "wall_time_s": 2.65,
+              "cost_budget_usd": 0.005,
+              "latency_budget_s": 5.0
+            }
+          }
+        },
+        "total_tokens": 2010,
+        "cost_usd": 0.00825,
+        "wall_time_s": 2.65
+      },
+      {
+        "case_id": "c04",
+        "input": "What is the weather in Tokyo?",
+        "final_answer": "Hard to say for sure, but possibly It is 24 C and, I did not verify.",
+        "tool_sequence": [
+          "web_search",
+          "weather",
+          "weather"
+        ],
+        "metrics": {
+          "tool_selection": {
+            "metric": "tool_selection",
+            "score": 0.6667,
+            "details": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6667,
+              "missing": [],
+              "unexpected": [
+                "web_search"
+              ]
+            }
+          },
+          "tool_order": {
+            "metric": "tool_order",
+            "score": 0.3333,
+            "details": {
+              "edit_distance": 2,
+              "expected_sequence": [
+                "weather"
+              ],
+              "actual_sequence": [
+                "web_search",
+                "weather",
+                "weather"
+              ]
+            }
+          },
+          "efficiency": {
+            "metric": "efficiency",
+            "score": 0.3333,
+            "details": {
+              "reference_steps": 1,
+              "actual_steps": 3,
+              "redundant_calls": 1
+            }
+          },
+          "answer_correctness": {
+            "metric": "answer_correctness",
+            "score": 0.3707,
+            "details": {
+              "exact": false,
+              "fuzzy": 0.4082,
+              "judge": "offline",
+              "judge_score": 0.3333,
+              "judge_rationale": "Covered 1/3 reference keywords. Missing: sunny, tokyo."
+            }
+          },
+          "cost_latency": {
+            "metric": "cost_latency",
+            "score": 0.3903,
+            "details": {
+              "cost_usd": 0.00825,
+              "total_tokens": 2010,
+              "wall_time_s": 2.65,
+              "cost_budget_usd": 0.005,
+              "latency_budget_s": 5.0
+            }
+          }
+        },
+        "total_tokens": 2010,
+        "cost_usd": 0.00825,
+        "wall_time_s": 2.65
+      },
+      {
+        "case_id": "c05",
+        "input": "What is the weather in London?",
+        "final_answer": "Hard to say for sure, but possibly It is 14 C and, I did not verify.",
+        "tool_sequence": [
+          "web_search",
+          "weather",
+          "weather"
+        ],
+        "metrics": {
+          "tool_selection": {
+            "metric": "tool_selection",
+            "score": 0.6667,
+            "details": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6667,
+              "missing": [],
+              "unexpected": [
+                "web_search"
+              ]
+            }
+          },
+          "tool_order": {
+            "metric": "tool_order",
+            "score": 0.3333,
+            "details": {
+              "edit_distance": 2,
+              "expected_sequence": [
+                "weather"
+              ],
+              "actual_sequence": [
+                "web_search",
+                "weather",
+                "weather"
+              ]
+            }
+          },
+          "efficiency": {
+            "metric": "efficiency",
+            "score": 0.3333,
+            "details": {
+              "reference_steps": 1,
+              "actual_steps": 3,
+              "redundant_calls": 1
+            }
+          },
+          "answer_correctness": {
+            "metric": "answer_correctness",
+            "score": 0.3725,
+            "details": {
+              "exact": false,
+              "fuzzy": 0.4118,
+              "judge": "offline",
+              "judge_score": 0.3333,
+              "judge_rationale": "Covered 1/3 reference keywords. Missing: overcast, london."
+            }
+          },
+          "cost_latency": {
+            "metric": "cost_latency",
+            "score": 0.3903,
+            "details": {
+              "cost_usd": 0.00825,
+              "total_tokens": 2010,
+              "wall_time_s": 2.65,
+              "cost_budget_usd": 0.005,
+              "latency_budget_s": 5.0
+            }
+          }
+        },
+        "total_tokens": 2010,
+        "cost_usd": 0.00825,
+        "wall_time_s": 2.65
+      },
+      {
+        "case_id": "c06",
+        "input": "Who founded Acme Corporation?",
+        "final_answer": "Hard to say for sure, but possibly Acme Corporation was founded by Jane, I did not verify.",
+        "tool_sequence": [
+          "web_search",
+          "web_search"
+        ],
+        "metrics": {
+          "tool_selection": {
+            "metric": "tool_selection",
+            "score": 1.0,
+            "details": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "missing": [],
+              "unexpected": []
+            }
+          },
+          "tool_order": {
+            "metric": "tool_order",
+            "score": 0.5,
+            "details": {
+              "edit_distance": 1,
+              "expected_sequence": [
+                "web_search"
+              ],
+              "actual_sequence": [
+                "web_search",
+                "web_search"
+              ]
+            }
+          },
+          "efficiency": {
+            "metric": "efficiency",
+            "score": 0.5,
+            "details": {
+              "reference_steps": 1,
+              "actual_steps": 2,
+              "redundant_calls": 1
+            }
+          },
+          "answer_correctness": {
+            "metric": "answer_correctness",
+            "score": 0.6241,
+            "details": {
+              "exact": false,
+              "fuzzy": 0.5816,
+              "judge": "offline",
+              "judge_score": 0.6667,
+              "judge_rationale": "Covered 4/6 reference keywords. Missing: smith, 1998."
+            }
+          },
+          "cost_latency": {
+            "metric": "cost_latency",
+            "score": 0.4073,
+            "details": {
+              "cost_usd": 0.00825,
+              "total_tokens": 2010,
+              "wall_time_s": 2.37,
+              "cost_budget_usd": 0.005,
+              "latency_budget_s": 5.0
+            }
+          }
+        },
+        "total_tokens": 2010,
+        "cost_usd": 0.00825,
+        "wall_time_s": 2.37
+      },
+      {
+        "case_id": "c07",
+        "input": "What does the Voyager 1 probe study?",
+        "final_answer": "Hard to say for sure, but possibly The Voyager 1 probe studies the outer, I did not verify.",
+        "tool_sequence": [
+          "web_search",
+          "web_search"
+        ],
+        "metrics": {
+          "tool_selection": {
+            "metric": "tool_selection",
+            "score": 1.0,
+            "details": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "missing": [],
+              "unexpected": []
+            }
+          },
+          "tool_order": {
+            "metric": "tool_order",
+            "score": 0.5,
+            "details": {
+              "edit_distance": 1,
+              "expected_sequence": [
+                "web_search"
+              ],
+              "actual_sequence": [
+                "web_search",
+                "web_search"
+              ]
+            }
+          },
+          "efficiency": {
+            "metric": "efficiency",
+            "score": 0.5,
+            "details": {
+              "reference_steps": 1,
+              "actual_steps": 2,
+              "redundant_calls": 1
+            }
+          },
+          "answer_correctness": {
+            "metric": "answer_correctness",
+            "score": 0.5808,
+            "details": {
+              "exact": false,
+              "fuzzy": 0.5366,
+              "judge": "offline",
+              "judge_score": 0.625,
+              "judge_rationale": "Covered 5/8 reference keywords. Missing: heliosphere, interstellar, space."
+            }
+          },
+          "cost_latency": {
+            "metric": "cost_latency",
+            "score": 0.4073,
+            "details": {
+              "cost_usd": 0.00825,
+              "total_tokens": 2010,
+              "wall_time_s": 2.37,
+              "cost_budget_usd": 0.005,
+              "latency_budget_s": 5.0
+            }
+          }
+        },
+        "total_tokens": 2010,
+        "cost_usd": 0.00825,
+        "wall_time_s": 2.37
+      },
+      {
+        "case_id": "c08",
+        "input": "What language is the Zephyr framework written in?",
+        "final_answer": "Hard to say for sure, but possibly The Zephyr framework is, I did not verify.",
+        "tool_sequence": [
+          "web_search",
+          "web_search"
+        ],
+        "metrics": {
+          "tool_selection": {
+            "metric": "tool_selection",
+            "score": 1.0,
+            "details": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "missing": [],
+              "unexpected": []
+            }
+          },
+          "tool_order": {
+            "metric": "tool_order",
+            "score": 0.5,
+            "details": {
+              "edit_distance": 1,
+              "expected_sequence": [
+                "web_search"
+              ],
+              "actual_sequence": [
+                "web_search",
+                "web_search"
+              ]
+            }
+          },
+          "efficiency": {
+            "metric": "efficiency",
+            "score": 0.5,
+            "details": {
+              "reference_steps": 1,
+              "actual_steps": 2,
+              "redundant_calls": 1
+            }
+          },
+          "answer_correctness": {
+            "metric": "answer_correctness",
+            "score": 0.4808,
+            "details": {
+              "exact": false,
+              "fuzzy": 0.4615,
+              "judge": "offline",
+              "judge_score": 0.5,
+              "judge_rationale": "Covered 2/4 reference keywords. Missing: written, rust."
+            }
+          },
+          "cost_latency": {
+            "metric": "cost_latency",
+            "score": 0.4073,
+            "details": {
+              "cost_usd": 0.00825,
+              "total_tokens": 2010,
+              "wall_time_s": 2.37,
+              "cost_budget_usd": 0.005,
+              "latency_budget_s": 5.0
+            }
+          }
+        },
+        "total_tokens": 2010,
+        "cost_usd": 0.00825,
+        "wall_time_s": 2.37
+      },
+      {
+        "case_id": "c09",
+        "input": "If the temperature in Berlin doubled, what would it be?",
+        "final_answer": "Hard to say for sure, but possibly If the temperature in Berlin doubled it, I did not verify.",
+        "tool_sequence": [
+          "web_search",
+          "weather",
+          "weather",
+          "calculator"
+        ],
+        "metrics": {
+          "tool_selection": {
+            "metric": "tool_selection",
+            "score": 0.8,
+            "details": {
+              "precision": 0.6667,
+              "recall": 1.0,
+              "f1": 0.8,
+              "missing": [],
+              "unexpected": [
+                "web_search"
+              ]
+            }
+          },
+          "tool_order": {
+            "metric": "tool_order",
+            "score": 0.5,
+            "details": {
+              "edit_distance": 2,
+              "expected_sequence": [
+                "weather",
+                "calculator"
+              ],
+              "actual_sequence": [
+                "web_search",
+                "weather",
+                "weather",
+                "calculator"
+              ]
+            }
+          },
+          "efficiency": {
+            "metric": "efficiency",
+            "score": 0.5,
+            "details": {
+              "reference_steps": 2,
+              "actual_steps": 4,
+              "redundant_calls": 1
+            }
+          },
+          "answer_correctness": {
+            "metric": "answer_correctness",
+            "score": 0.6743,
+            "details": {
+              "exact": false,
+              "fuzzy": 0.5986,
+              "judge": "offline",
+              "judge_score": 0.75,
+              "judge_rationale": "Covered 3/4 reference keywords. Missing: 22."
+            }
+          },
+          "cost_latency": {
+            "metric": "cost_latency",
+            "score": 0.3743,
+            "details": {
+              "cost_usd": 0.00825,
+              "total_tokens": 2010,
+              "wall_time_s": 2.93,
+              "cost_budget_usd": 0.005,
+              "latency_budget_s": 5.0
+            }
+          }
+        },
+        "total_tokens": 2010,
+        "cost_usd": 0.00825,
+        "wall_time_s": 2.93
+      },
+      {
+        "case_id": "c10",
+        "input": "What is the sum of the temperatures in Tokyo and Berlin?",
+        "final_answer": "Hard to say for sure, but possibly The sum of the temperatures in Tokyo and, I did not verify.",
+        "tool_sequence": [
+          "web_search",
+          "weather",
+          "weather",
+          "weather",
+          "calculator"
+        ],
+        "metrics": {
+          "tool_selection": {
+            "metric": "tool_selection",
+            "score": 0.8,
+            "details": {
+              "precision": 0.6667,
+              "recall": 1.0,
+              "f1": 0.8,
+              "missing": [],
+              "unexpected": [
+                "web_search"
+              ]
+            }
+          },
+          "tool_order": {
+            "metric": "tool_order",
+            "score": 0.6,
+            "details": {
+              "edit_distance": 2,
+              "expected_sequence": [
+                "weather",
+                "weather",
+                "calculator"
+              ],
+              "actual_sequence": [
+                "web_search",
+                "weather",
+                "weather",
+                "weather",
+                "calculator"
+              ]
+            }
+          },
+          "efficiency": {
+            "metric": "efficiency",
+            "score": 0.6,
+            "details": {
+              "reference_steps": 3,
+              "actual_steps": 5,
+              "redundant_calls": 1
+            }
+          },
+          "answer_correctness": {
+            "metric": "answer_correctness",
+            "score": 0.6,
+            "details": {
+              "exact": false,
+              "fuzzy": 0.6,
+              "judge": "offline",
+              "judge_score": 0.6,
+              "judge_rationale": "Covered 3/5 reference keywords. Missing: berlin, 35."
+            }
+          },
+          "cost_latency": {
+            "metric": "cost_latency",
+            "score": 0.3591,
+            "details": {
+              "cost_usd": 0.00825,
+              "total_tokens": 2010,
+              "wall_time_s": 3.21,
+              "cost_budget_usd": 0.005,
+              "latency_budget_s": 5.0
+            }
+          }
+        },
+        "total_tokens": 2010,
+        "cost_usd": 0.00825,
+        "wall_time_s": 3.21
+      }
+    ],
+    "mean_scores": {
+      "tool_selection": 0.7933,
+      "tool_order": 0.4266,
+      "efficiency": 0.4266,
+      "answer_correctness": 0.5072,
+      "cost_latency": 0.3907
+    },
+    "total_cost_usd": 0.0825,
+    "total_tokens": 20100,
+    "latency_p50_s": 2.65,
+    "latency_p95_s": 3.084
+  }
+}
