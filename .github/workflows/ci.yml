@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install ruff
+        run: pip install ruff
+      - name: Lint all projects
+        run: ruff check .
+
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        project:
+          - 01-rag-knowledge-base
+          - 02-multi-agent-researcher
+          - 03-mcp-analytics-server
+          - 04-churn-prediction-pipeline
+          - 05-time-series-forecasting
+          - 06-mlops-pipeline
+          - 07-agent-eval-framework
+          - 08-llm-finetuning-qlora
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install project dependencies
+        working-directory: ${{ matrix.project }}
+        run: |
+          pip install -r requirements.txt
+          pip install pytest
+      - name: Run tests
+        working-directory: ${{ matrix.project }}
+        run: pytest -q

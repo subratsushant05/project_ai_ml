@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.python-version
+
+# Environments & secrets
+.env
+.env.*
+!.env.example
+*.pem
+credentials.json
+
+# Testing & tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data & artifacts (keep small sample data committed explicitly)
+data/raw/
+data/processed/
+*.parquet
+*.db
+*.sqlite3
+mlruns/
+mlartifacts/
+models/*.pkl
+models/*.pt
+models/*.joblib
+wandb/
+outputs/
+checkpoints/
+
+# Vector stores
+chroma_db/
+.chroma/
+*.faiss
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
