@@ -1,0 +1,8 @@
+# Runtime dependencies for the offline demo and API (CPU only).
+fastapi>=0.110
+uvicorn>=0.29
+pydantic>=2.7
+pydantic-settings>=2.2
+numpy>=1.26
+scikit-learn>=1.4
+rank_bm25>=0.2.2
