@@ -1,0 +1,100 @@
+{
+  "documents": [
+    {
+      "id": "re-solar-costs",
+      "title": "The Falling Cost of Solar Photovoltaics",
+      "url": "https://example.org/renewables/solar-costs",
+      "body": "Solar photovoltaic module prices have fallen by roughly 90 percent since 2010, driven by manufacturing scale, supply-chain learning curves, and improved cell efficiency. Utility-scale solar is now among the cheapest sources of new electricity generation in most regions. Continued cost declines are expected as tandem perovskite-silicon cells approach commercialization."
+    },
+    {
+      "id": "re-wind-power",
+      "title": "How Wind Turbines Generate Electricity",
+      "url": "https://example.org/renewables/wind-turbines",
+      "body": "Wind turbines convert kinetic energy in moving air into electricity using aerodynamic blades coupled to a generator through a gearbox or direct drive. Modern offshore wind turbines exceed 15 megawatts of capacity per unit and reach capacity factors above 50 percent. Turbine siting, blade length, and hub height are the principal drivers of energy yield."
+    },
+    {
+      "id": "re-grid-storage",
+      "title": "Grid-Scale Battery Storage for Renewable Energy",
+      "url": "https://example.org/renewables/grid-storage",
+      "body": "Grid-scale battery storage smooths the variable output of solar and wind power by charging during surplus generation and discharging during peak demand. Lithium-ion systems dominate deployments today, while flow batteries and compressed-air storage target longer durations. Storage costs per kilowatt-hour have declined steadily, making solar-plus-storage competitive with gas peaker plants."
+    },
+    {
+      "id": "re-policy",
+      "title": "Government Policy and Renewable Energy Adoption",
+      "url": "https://example.org/renewables/policy",
+      "body": "Feed-in tariffs, tax credits, renewable portfolio standards, and carbon pricing have historically accelerated renewable energy adoption. Policy stability matters more than subsidy size because project financing depends on predictable returns. Permitting delays and grid-connection queues are now the leading policy bottlenecks for new wind and solar capacity."
+    },
+    {
+      "id": "re-intermittency",
+      "title": "Managing Intermittency in Renewable Power Grids",
+      "url": "https://example.org/renewables/intermittency",
+      "body": "The main challenge of renewable energy is intermittency: solar and wind output varies with weather and time of day. Grid operators manage this variability with forecasting, demand response, storage, and interconnection across regions. High renewable penetration also requires new approaches to grid inertia and frequency regulation."
+    },
+    {
+      "id": "tf-attention",
+      "title": "Attention Mechanisms in Transformer Models",
+      "url": "https://example.org/ml/attention-mechanisms",
+      "body": "The core principle of transformer models is self-attention, which lets every token weigh its relevance to every other token in a sequence. Multi-head attention runs several attention functions in parallel so the model can capture different relationship types simultaneously. Because attention compares all token pairs, its cost grows quadratically with sequence length."
+    },
+    {
+      "id": "tf-architecture",
+      "title": "The Transformer Architecture Explained",
+      "url": "https://example.org/ml/transformer-architecture",
+      "body": "A transformer model stacks layers that combine multi-head self-attention, position-wise feed-forward networks, residual connections, and layer normalization. Positional encodings inject word-order information because attention itself is order-agnostic. The architecture processes whole sequences in parallel, which makes training far faster than recurrent networks."
+    },
+    {
+      "id": "tf-training",
+      "title": "How Large Language Models Are Trained",
+      "url": "https://example.org/ml/llm-training",
+      "body": "Large language models are trained in stages: self-supervised pretraining on internet-scale text to predict the next token, followed by supervised fine-tuning and preference optimization to align outputs with human intent. Pretraining a frontier transformer model requires thousands of accelerators running for weeks. Data quality and deduplication strongly influence downstream capability."
+    },
+    {
+      "id": "tf-scaling",
+      "title": "Scaling Laws for Neural Language Models",
+      "url": "https://example.org/ml/scaling-laws",
+      "body": "Empirical scaling laws show that transformer language model loss falls predictably as a power law in parameters, data, and compute. Compute-optimal training balances model size against dataset size rather than maximizing parameters alone. These laws guide practical applications by letting teams forecast model quality before committing large training budgets."
+    },
+    {
+      "id": "tf-applications",
+      "title": "Real-World Applications of Transformer Models",
+      "url": "https://example.org/ml/transformer-applications",
+      "body": "Transformer models power machine translation, conversational assistants, code completion, document summarization, and semantic search in production systems. Vision transformers extend the same architecture to image classification and object detection. Fine-tuned domain models support clinical text mining, legal document review, and financial analysis."
+    },
+    {
+      "id": "tf-limits",
+      "title": "Limitations and Risks of Large Language Models",
+      "url": "https://example.org/ml/llm-limitations",
+      "body": "Key challenges and limitations of transformer language models include hallucination of plausible but false statements, sensitivity to prompt phrasing, and quadratic attention cost on long inputs. Models can reproduce biases present in training data and are expensive to serve at scale. Retrieval augmentation and verification pipelines are common mitigations in applied systems."
+    },
+    {
+      "id": "ev-batteries",
+      "title": "Lithium-Ion Batteries in Electric Vehicles",
+      "url": "https://example.org/ev/batteries",
+      "body": "Electric vehicles rely on lithium-ion battery packs whose energy density has roughly tripled since 2010 while pack prices fell below 100 dollars per kilowatt-hour. Chemistry choices such as lithium iron phosphate trade energy density for cost, safety, and cycle life. Battery recycling and second-life storage are emerging industries built on retired EV packs."
+    },
+    {
+      "id": "ev-charging",
+      "title": "Electric Vehicle Charging Infrastructure",
+      "url": "https://example.org/ev/charging",
+      "body": "Electric vehicle charging spans slow home charging, public AC chargers, and DC fast chargers that add hundreds of kilometers of range in under thirty minutes. Charging infrastructure density is a leading predictor of EV adoption in a region. Smart charging shifts demand to off-peak hours and can supply grid services through vehicle-to-grid schemes."
+    },
+    {
+      "id": "ev-market",
+      "title": "Global Electric Vehicle Market Trends",
+      "url": "https://example.org/ev/market-trends",
+      "body": "Electric vehicles passed one in five new car sales globally in 2024, led by strong adoption in China and Europe. Falling battery costs, wider model availability, and emission regulations are the primary growth drivers. Analysts expect price parity with combustion cars for most segments as manufacturing scales."
+    },
+    {
+      "id": "ev-environment",
+      "title": "Environmental Impact of Electric Vehicles",
+      "url": "https://example.org/ev/environmental-impact",
+      "body": "Over a full life cycle, electric vehicles emit substantially less carbon dioxide than combustion cars, and the gap widens as electricity grids decarbonize. Battery manufacturing dominates the upfront emissions footprint of an EV. Responsible sourcing of lithium, nickel, and cobalt remains an active environmental and social concern."
+    },
+    {
+      "id": "ev-challenges",
+      "title": "Challenges Facing Electric Vehicle Adoption",
+      "url": "https://example.org/ev/adoption-challenges",
+      "body": "The main challenges and limitations for electric vehicle adoption are upfront purchase price, charging access for drivers without home parking, and range anxiety on long trips. Grid upgrades are needed where fast-charging clusters concentrate demand. Used EV markets and battery health transparency are becoming important for mainstream buyers."
+    }
+  ]
+}

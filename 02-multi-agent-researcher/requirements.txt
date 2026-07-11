@@ -1,0 +1,9 @@
+# Core dependencies for the offline demo and test suite.
+# Optional extras (install only if you use the corresponding provider):
+#   langchain-openai    -> OpenAI-hosted models (AGENT_MODEL_PROVIDER=openai)
+#   langchain-anthropic -> Anthropic-hosted models (AGENT_MODEL_PROVIDER=anthropic)
+#   tavily-python       -> live web search (AGENT_SEARCH_PROVIDER=tavily)
+langgraph>=0.4,<2.0
+langchain-core>=0.3,<2.0
+pydantic>=2.7,<3.0
+pydantic-settings>=2.2,<3.0
