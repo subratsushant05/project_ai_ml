@@ -1,0 +1,23 @@
+[project]
+name = "churn-pipeline"
+version = "1.0.0"
+description = "End-to-end customer churn prediction pipeline with business-calibrated thresholding"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
+ignore = [
+    "E402",  # plots.py sets the matplotlib backend before pyplot import
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::FutureWarning",
+]
