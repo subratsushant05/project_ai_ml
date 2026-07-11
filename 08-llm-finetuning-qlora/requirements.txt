@@ -1,0 +1,7 @@
+# Light dependencies: everything needed for the data, config, planning and
+# evaluation layers, the demo, and the test suite (plus pytest/ruff for dev).
+pandas>=2.0
+numpy>=1.26
+pydantic>=2.5
+pydantic-settings>=2.1
+pyyaml>=6.0

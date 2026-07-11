@@ -1,0 +1,34 @@
+# Smoke-test config: Qwen2.5 0.5B Instruct. Small enough to sanity-check the
+# full training loop on a modest GPU (or slowly on CPU) before an 8B run.
+model_name: Qwen/Qwen2.5-0.5B-Instruct
+chat_template: chatml
+
+lora:
+  r: 8
+  alpha: 16
+  dropout: 0.05
+  target_modules: [q_proj, k_proj, v_proj, o_proj]
+
+quantization:
+  load_in_4bit: true
+  quant_type: nf4
+  double_quant: true
+  compute_dtype: bfloat16
+
+optimizer:
+  learning_rate: 2.0e-4
+  scheduler: cosine
+  warmup_ratio: 0.03
+  weight_decay: 0.0
+  name: paged_adamw_8bit
+
+max_seq_length: 1024
+packing: true
+per_device_train_batch_size: 4
+gradient_accumulation_steps: 4
+num_train_epochs: 1.0
+gradient_checkpointing: true
+logging_steps: 5
+eval_steps: 20
+output_dir: outputs/qwen25-05b-smoke
+seed: 13

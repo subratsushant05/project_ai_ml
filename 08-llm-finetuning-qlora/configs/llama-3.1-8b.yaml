@@ -1,0 +1,34 @@
+# QLoRA fine-tune of Llama 3.1 8B Instruct on helpdesk instructions.
+# Fits on a single 24 GB GPU (see dry-run VRAM estimate).
+model_name: meta-llama/Llama-3.1-8B-Instruct
+chat_template: llama3
+
+lora:
+  r: 16
+  alpha: 32            # alpha = 2*r convention
+  dropout: 0.05
+  target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+
+quantization:
+  load_in_4bit: true
+  quant_type: nf4
+  double_quant: true
+  compute_dtype: bfloat16
+
+optimizer:
+  learning_rate: 2.0e-4
+  scheduler: cosine
+  warmup_ratio: 0.03
+  weight_decay: 0.0
+  name: paged_adamw_8bit
+
+max_seq_length: 2048
+packing: true
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 16
+num_train_epochs: 2.0
+gradient_checkpointing: true
+logging_steps: 10
+eval_steps: 50
+output_dir: outputs/llama31-8b-helpdesk
+seed: 13

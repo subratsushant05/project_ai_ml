@@ -1,0 +1,16 @@
+# Heavy training dependencies. GPU (CUDA 12.x) required in practice;
+# bitsandbytes 4-bit kernels are CUDA-only.
+#
+# This combination is known to work together (mid-2025 stack):
+#   torch 2.6 + transformers 4.51 + peft 0.15 + trl 0.17 + bitsandbytes 0.45
+#
+# Install AFTER the light requirements:
+#   pip install -r requirements.txt
+#   pip install -r requirements-train.txt
+torch==2.6.0
+transformers==4.51.3
+datasets==3.5.0
+peft==0.15.2
+trl==0.17.0
+bitsandbytes==0.45.5
+accelerate==1.6.0

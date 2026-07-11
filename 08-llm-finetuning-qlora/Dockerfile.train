@@ -1,0 +1,34 @@
+# Training image: CUDA runtime + the heavy fine-tuning stack.
+# Requires an NVIDIA GPU and the NVIDIA container toolkit on the host.
+#
+#   docker build -f Dockerfile.train -t qlora-tune-train .
+#   docker run --rm --gpus all \
+#     -v $PWD/demo_output:/app/demo_output -v $PWD/outputs:/app/outputs \
+#     -e HF_TOKEN=$HF_TOKEN \
+#     qlora-tune-train \
+#     python -m qlora_tune.train --config configs/llama-3.1-8b.yaml \
+#       --train-file demo_output/train.jsonl --val-file demo_output/val.jsonl
+#
+# Notes:
+#   * bitsandbytes needs a CUDA-capable GPU at runtime; the image builds fine
+#     without one but 4-bit loading will fail on CPU-only hosts.
+#   * Gated models (Llama) need HF_TOKEN with accepted license terms.
+
+FROM nvidia/cuda:12.4.1-runtime-ubuntu22.04
+
+ENV DEBIAN_FRONTEND=noninteractive PIP_NO_CACHE_DIR=1
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends python3.11 python3-pip git \
+    && rm -rf /var/lib/apt/lists/* \
+    && ln -sf /usr/bin/python3.11 /usr/local/bin/python
+
+WORKDIR /app
+
+COPY requirements.txt requirements-train.txt ./
+RUN python -m pip install -r requirements.txt -r requirements-train.txt
+
+COPY qlora_tune/ qlora_tune/
+COPY configs/ configs/
+
+CMD ["python", "-m", "qlora_tune.train", "--config", "configs/qwen2.5-0.5b-smoke-test.yaml", "--dry-run"]
