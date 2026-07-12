@@ -1,6 +1,6 @@
 # AI / ML Engineering Portfolio
 
-> Eight end-to-end projects covering the modern AI engineering stack — RAG, multi-agent systems, MCP servers, production ML pipelines, forecasting, MLOps, agent evaluation, and LLM fine-tuning. Every project ships real, tested, runnable code: **309 passing tests**, offline-first demos, Dockerfiles, and CI.
+> Eight end to end projects covering the modern AI engineering stack RAG, multi-agent systems, MCP servers, production ML pipelines, forecasting, MLOps, agent evaluation, and LLM fine-tuning. Every project ships real, tested, runnable code: **309 passing tests**, offline-first demos, Dockerfiles, and CI.
 
 [![CI](https://github.com/subratsushant05/project_ai_ml/actions/workflows/ci.yml/badge.svg)](https://github.com/subratsushant05/project_ai_ml/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://python.org)
