@@ -1,86 +1,87 @@
-# AI / ML Engineering Portfolio
+# Applied AI / ML Engineering Portfolio — Subrat Sushant
 
-> Eight end to end projects covering the modern AI engineering stack RAG, multi-agent systems, MCP servers, production ML pipelines, forecasting, MLOps, agent evaluation, and LLM fine-tuning. Every project ships real, tested, runnable code: **309 passing tests**, offline-first demos, Dockerfiles, and CI.
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white)
+![Tests](https://img.shields.io/badge/tests-309%20passing-brightgreen)
+![Lint](https://img.shields.io/badge/lint-ruff-46a2f1)
+![License](https://img.shields.io/badge/license-MIT-black)
+![Offline First](https://img.shields.io/badge/demos-run%20offline-success)
 
-[![CI](https://github.com/subratsushant05/project_ai_ml/actions/workflows/ci.yml/badge.svg)](https://github.com/subratsushant05/project_ai_ml/actions/workflows/ci.yml)
-[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://python.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+Eight end-to-end AI/ML engineering projects — spanning **RAG, LLM agents, MLOps, and QLoRA fine-tuning** — built with typed Python, pluggable interfaces, and **309 deterministic tests**. Every demo runs **fully offline** (no API key or model download required), with optional OpenAI/Anthropic backends via environment variables. The emphasis throughout is production-quality code and *honest* metrics.
 
-Hi, I'm **Subrat Sushant** — a Masters student in Information Technology & Analytics (AI/ML focus). I built this portfolio the way production systems are built: typed Python, pluggable interfaces, deterministic tests, honest metrics, and documentation that explains *why*, not just *what*.
-
-📧 [subrat.sushant@gmail.com](mailto:subrat.sushant@gmail.com) · 💼 [LinkedIn](https://www.linkedin.com/in/subrat-sushant/) · 🐙 [GitHub](https://github.com/subratsushant05)
-
----
-
-## Projects
-
-| # | Project | What it demonstrates | Tests |
-|---|---------|----------------------|-------|
-| 01 | [RAG Knowledge Base](./01-rag-knowledge-base/) | Hybrid retrieval (BM25 + dense with reciprocal rank fusion), semantic chunking, citation-grounded answers, FastAPI service | 45 |
-| 02 | [Multi-Agent Researcher](./02-multi-agent-researcher/) | LangGraph StateGraph with Planner → Researcher → Writer → Critic, bounded revision loops, human-in-the-loop `interrupt()`, checkpoint/resume | 32 |
-| 03 | [MCP Analytics Server](./03-mcp-analytics-server/) | Custom Model Context Protocol server (FastMCP, stdio) with a three-layer read-only SQL guard — usable from Claude Desktop/Cursor | 56 |
-| 04 | [Churn Prediction Pipeline](./04-churn-prediction-pipeline/) | sklearn/LightGBM pipeline, Optuna tuning, profit-maximizing decision thresholds, TreeSHAP explanations, model serving | 28 |
-| 05 | [Time-Series Forecasting](./05-time-series-forecasting/) | Four models behind one interface, rolling-origin backtesting, MASE-based selection, split-conformal prediction intervals | 33 |
-| 06 | [MLOps Pipeline](./06-mlops-pipeline/) | MLflow tracking, registry promotion policy with rollback + audit log, PSI/KS drift detection, Prometheus-instrumented serving | 33 |
-| 07 | [Agent Eval Framework](./07-agent-eval-framework/) | Trajectory-level agent evaluation: tool-selection F1, call-order edit distance, efficiency, LLM-as-judge, CI gating | 26 |
-| 08 | [QLoRA Fine-Tuning Toolkit](./08-llm-finetuning-qlora/) | Instruction-dataset engineering, chat templates from scratch, analytic LoRA/VRAM planning, TRL SFTTrainer training layer | 56 |
-
-Every project is self-contained: its own README (architecture diagram, design decisions, real output), `requirements.txt`, `Dockerfile`, `Makefile`, and test suite. All demos run **fully offline** — no API keys needed — while OpenAI/Anthropic/Tavily backends plug in via environment variables.
+> All metrics below are computed on bundled synthetic data with fixed seeds, so results are reproducible on any machine.
 
 ---
 
-## Engineering principles behind this repo
+## 🧭 Recruiters — start here
 
-**Offline-first, provider-pluggable.** Every LLM, embedding, and search dependency sits behind a small interface with a deterministic offline implementation. Demos and tests run anywhere; swapping in GPT-4o or Claude is a config change, not a rewrite.
+| # | Project | What it does | Headline result | Core stack |
+|---|---------|--------------|-----------------|------------|
+| 01 | [**RAG Knowledge Base**](./01-rag-knowledge-base) | Hybrid **BM25 + dense** retrieval with reciprocal-rank fusion and **cited** answers | 45 offline tests; inline citations back to source chunks | FastAPI · NumPy · Docker |
+| 02 | [**Multi-Agent Researcher**](./02-multi-agent-researcher) | 4-agent (Planner→Researcher→Writer→Critic) report writer with a **human approval gate** | 32 tests; bounded revision loop gated at 10/10 critic score | LangGraph · LangChain |
+| 03 | [**MCP Analytics Server**](./03-mcp-analytics-server) | MCP server exposing **read-only SQL** analytics with 3-layer write protection | 56 tests; deny-by-default SQL authorizer resists prompt injection | FastMCP · SQLite · Pydantic |
+| 04 | [**Churn Prediction Pipeline**](./04-churn-prediction-pipeline) | Telco churn model with a **profit-optimized** decision threshold | ROC-AUC **0.850**, PR-AUC 0.739; threshold 0.41 → **$36.4k profit / 1k customers** | LightGBM · Optuna · SHAP · FastAPI |
+| 05 | [**Time-Series Forecasting**](./05-time-series-forecasting) | Multi-model forecasting with rolling backtests and **conformal** intervals | sMAPE ~2–3%, MASE ~0.78; 90% intervals cover **93–96%** | statsmodels · LightGBM · Plotly |
+| 06 | [**MLOps Pipeline**](./06-mlops-pipeline) | MLflow registry with **policy-gated promotion** and drift-triggered retraining | 33 tests; PSI/KS drift detection + Prometheus metrics | MLflow · FastAPI · Prometheus · Docker |
+| 07 | [**Agent Eval Framework**](./07-agent-eval-framework) | **Trajectory-level** LLM-agent evaluation (not just final answers) with CI gating | 26 tests; GoodAgent 0.987 vs SloppyAgent 0.509 overall | Pydantic v2 · pytest |
+| 08 | [**LLM Fine-Tuning (QLoRA)**](./08-llm-finetuning-qlora) | QLoRA instruction-tuning toolkit with a **CPU-testable** core | 56 tests; 4-bit base, ~0.5% trainable params | PyTorch · PEFT · TRL · BitsAndBytes |
 
-**Tested like production code.** 309 pytest tests across the repo — metric math verified against hand-computed cases, leakage checks in backtesting, SQL-injection guards exercised against every mutation class, promotion policies proven to reject worse models. CI runs lint + the full matrix on every push.
-
-**Honest results.** Datasets are synthetic and documented as such; every number in every README comes from a real run of the committed code. No borrowed benchmarks, no fabricated metrics.
-
-**Small, readable modules.** Typed Python 3.11, Google-style docstrings, pydantic v2 configs, files under ~300 lines, `ruff`-clean.
-
----
-
-## Where to look, by role
-
-| If you're hiring for | Start with |
-|----------------------|------------|
-| **LLM / AI Engineer** | 01 (RAG), 02 (agents), 03 (MCP), 08 (fine-tuning) |
-| **ML Engineer** | 04 (churn pipeline), 05 (forecasting), 06 (MLOps) |
-| **MLOps / Platform** | 06 (registry + drift), 03 (serving + guardrails), CI setup |
-| **Data Scientist** | 05 (backtesting + conformal intervals), 04 (SHAP + business thresholds) |
-| **AI Quality / Evals** | 07 (agent evals), 04 (model validation), 06 (drift detection) |
+**Short on time?** Start with **04 (Churn)** for classic ML + business framing, **01 (RAG)** and **02 (Agents)** for LLM systems, and **06 (MLOps)** for production engineering.
 
 ---
 
-## Tech stack
+## Why this portfolio is different
 
-```
-Core:            Python 3.11, pydantic v2, FastAPI, pytest, ruff
-LLM / Agents:    LangGraph, LangChain Core, MCP (Model Context Protocol),
-                 OpenAI / Anthropic APIs (optional adapters), QLoRA (peft, TRL, bitsandbytes)
-ML:              scikit-learn, LightGBM, Optuna, SHAP, statsmodels
-MLOps:           MLflow, Prometheus, Docker, GitHub Actions, drift detection (PSI/KS)
-Retrieval:       BM25 (rank_bm25), dense embeddings, reciprocal rank fusion, ChromaDB-ready
-Serving:         FastAPI, uvicorn, Docker (non-root, slim images), docker-compose
+- **It runs.** Every project has a one-command offline demo — a reviewer can clone and see it work in seconds, no keys needed.
+- **It's tested.** 309 deterministic tests across the suite, all ruff-clean, wired into CI.
+- **It's honest.** Metrics come from reproducible synthetic data with stated seeds; where a number is illustrative (e.g., the QLoRA eval), the README says so.
+- **It's typed and modular.** pydantic v2 models, pluggable provider interfaces, and clear separation between CPU-testable logic and GPU/heavy paths.
+
+## Flagship architecture — RAG Knowledge Base (01)
+
+```mermaid
+flowchart LR
+    D[Documents] --> C[Chunk + Embed]
+    C --> V[(Vector store)]
+    Q[User question] --> H{Hybrid retriever}
+    V --> H
+    H -->|dense cosine| R[Reciprocal Rank Fusion]
+    H -->|sparse BM25| R
+    R --> L[LLM provider]
+    L --> A[Answer with inline citations]
 ```
 
-## Running anything
+## Flagship flow — Multi-Agent Researcher (02)
+
+```mermaid
+flowchart LR
+    Q[Question] --> P[Planner]
+    P --> Rsr[Researcher]
+    Rsr --> G{{Human approval gate}}
+    G --> W[Writer]
+    W --> Cr[Critic]
+    Cr -->|score < 8/10| W
+    Cr -->|pass or max revisions| Out[Final report + citations]
+```
+
+## Tech foundation
+
+**Language & tooling:** Python 3.11 · pydantic v2 · FastAPI · pytest · ruff · Docker · GitHub Actions
+**ML & data:** scikit-learn · LightGBM · Optuna · SHAP · statsmodels · NumPy
+**LLM & agents:** LangGraph · LangChain · MCP (FastMCP) · PEFT · TRL · BitsAndBytes
+**MLOps:** MLflow · Prometheus · conformal prediction · drift detection (PSI/KS)
+
+## Running any project
 
 ```bash
-git clone https://github.com/subratsushant05/project_ai_ml.git
-cd project_ai_ml/01-rag-knowledge-base   # or any project
+cd <project-folder>
 pip install -r requirements.txt
-make test    # run the test suite
-make demo    # end-to-end offline demo
+python -m <package>.demo        # offline, deterministic demo
+# optional hosted LLM:  export <PROVIDER>_API_KEY=...  &&  export ..._PROVIDER=openai
 ```
+
+Each folder has its own README with the exact commands, architecture, and full metrics.
 
 ---
 
-## Contact
-
-I'm actively looking for AI/ML engineering roles and always happy to talk through any design decision in this repo.
-
-**Subrat Sushant** · [subrat.sushant@gmail.com](mailto:subrat.sushant@gmail.com) · [linkedin.com/in/subrat-sushant](https://www.linkedin.com/in/subrat-sushant/)
-
-*Last updated: July 2026*
+**Subrat Sushant** — Applied AI / ML Engineer · M.S. Information Technology & Analytics, Rutgers (Dec 2026)
+📧 subrat.sushant@gmail.com · [LinkedIn](https://www.linkedin.com/in/subrat-sushant/) · [GitHub](https://github.com/subratsushant05)
